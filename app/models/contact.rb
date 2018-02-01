@@ -4,7 +4,7 @@ class Contact < ApplicationRecord
     has_many :phones
     has_one :address
     accepts_nested_attributes_for :phones #aceitar attributos aninhados
-    accepts_nested_attributes_for :address, update_only: true # Não vai criar novos endereços quando alterar, vai apenas atualizar oq já existe 
+    accepts_nested_attributes_for :address, update_only: true # Não vai criar novos endereços quando alterar, vai apenas atualizar oq já 
 
     def as_json(options={})
         hash = super(options)
